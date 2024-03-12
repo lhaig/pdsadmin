@@ -63,7 +63,7 @@ func areFilesEqual(file1, file2 string) (bool, error) {
 
 func updatePds() {
 	composeUrl := "https://raw.githubusercontent.com/bluesky-social/pds/main/compose.yaml"
-	pdsDataDir := "./develop/pds"
+	pdsDataDir := "/pds"
 	composeFile := filepath.Join(pdsDataDir, "compose.yaml")
 	backupComposeFile := filepath.Join(pdsDataDir, "compose.yaml.bkup")
 	tmpFile := filepath.Join(os.TempDir(), "tempcompose.yaml")
