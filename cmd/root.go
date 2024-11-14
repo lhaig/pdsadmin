@@ -26,7 +26,7 @@ import (
 
 var (
 	cfgFile string
-	version = "0.0.1"
+	version string
 )
 
 // rootCmd represents the base command when called without any subcommands
@@ -42,7 +42,8 @@ pdsadmin account create`,
 
 // Execute adds all child commands to the root command and sets flags appropriately.
 // This is called by main.main(). It only needs to happen once to the rootCmd.
-func Execute() {
+func Execute(ver, commit, date string) {
+	version = ver
 	err := rootCmd.Execute()
 	if err != nil {
 		os.Exit(1)
