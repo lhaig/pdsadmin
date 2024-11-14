@@ -16,7 +16,11 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 package main
 
-import "github.com/lhaig/pdsadmin/cmd"
+import (
+	"fmt"
+
+	"github.com/lhaig/pdsadmin/cmd"
+)
 
 var (
 	version = "dev"
@@ -25,5 +29,5 @@ var (
 )
 
 func main() {
-	cmd.Execute(version, commit, date)
+	cmd.Execute(fmt.Sprintf("%s (built from %s on %s)", version, commit, date))
 }
